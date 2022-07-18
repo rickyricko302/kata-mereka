@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg"
+    >
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+
+                  android:id="@+id/quotesJUdul"
+                  android:textColor="@color/white"
+                  android:textStyle="bold"
+                  android:gravity="center_horizontal"
+                  android:layout_marginTop="20dp"
+                  android:textSize="20sp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:id="@+id/quotesPage"
+                  android:textColor="@color/white"
+                  android:textStyle="bold"
+                  android:gravity="center_horizontal"
+                  android:text="Page 1"
+                  android:layout_below="@+id/quotesJUdul"
+                  android:layout_marginBottom="20dp"
+                  android:textSize="15sp"/>
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+                                               android:background="@color/white"
+                                               android:layout_below="@+id/quotesPage">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           android:paddingLeft="15dp"
+                                                           android:paddingRight="15dp"
+                                                           android:id="@+id/quoteRecycler"
+                                                           android:nestedScrollingEnabled="false"
+                />
+                <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:id="@+id/quoteBack"
+                        android:text="Page 1"
+                        android:backgroundTint="@color/bg"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="15dp"
+                        android:layout_below="@id/quoteRecycler"/>
+                <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:id="@+id/quoteNext"
+                        android:text="Page 2"
+                        android:backgroundTint="@color/bg"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="15dp"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_below="@id/quoteRecycler"/>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+        <com.airbnb.lottie.LottieAnimationView android:layout_width="match_parent"
+                                               android:layout_height="wrap_content"
+                                               android:id="@+id/lottie_Quotes"
+                                               app:lottie_fileName="loading.json"
+                                               app:lottie_autoPlay="true"
+                                               app:lottie_loop="true"
+                                               android:layout_centerInParent="true"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_centerInParent="true"
+                android:text="Coba lagi..."
+                android:id="@+id/quoteCobaLagi"
+                android:visibility="gone"
+                android:backgroundTint="@color/bg"
+                android:textColor="@color/white"/>
+    </RelativeLayout>
+</layout>

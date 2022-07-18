@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="splashStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+    </style>
+    <style name="ShapeButtonOval" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="quotesStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">#212121</item>
+        <item name="android:windowBackground">#212121</item>
+        <item name="android:navigationBarColor">#212121</item>
+    </style>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="ItemTokohBinding">
+        <variable name="model" type="com.hikki.katamereka.model.TokohModel.Tokoh"/>
+    </data>
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardViewTokoh"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        >
+            <TextView android:layout_width="wrap_content" android:layout_height="77dp"
+                      android:textColor="@color/white"
+                      android:background="@color/bg"
+                      android:id="@+id/tokohNumber"
+                      android:padding="10dp"
+                      android:gravity="center"
+                      android:layout_marginRight="7dp"
+                      android:text="198"
+                      android:textSize="20sp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:textColor="@color/black"
+                      android:textStyle="bold"
+                      android:textSize="18sp"
+                      android:layout_toRightOf="@id/tokohNumber"
+                      android:maxLines="1"
+                      android:ellipsize="end"
+                      android:id="@+id/namaTokoh"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:text="@{model.tahun}"
+                      android:textColor="@color/black"
+                      android:textSize="18sp"
+                      android:id="@+id/tahunTokoh"
+                      android:layout_toRightOf="@id/tokohNumber"
+                      android:layout_below="@+id/namaTokoh"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:text="@{model.keterangan}"
+                      android:textSize="18sp"
+                      android:layout_below="@+id/tahunTokoh"
+                      android:maxLines="1"
+                      android:ellipsize="end"
+                      android:layout_toRightOf="@id/tokohNumber"
+                      />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
